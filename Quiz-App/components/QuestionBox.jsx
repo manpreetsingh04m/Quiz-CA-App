@@ -1,8 +1,10 @@
+// importing required components
 import React, { useState, useContext, useEffect } from 'react';
 import questions from './Question.jsx';
 import './../src/App.css';
 import { AppContext } from './../components/ParentContext.jsx';
 
+// exporting function QuestionBox
 export default function QuestionBox() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const {isDark,setIsDark} = useContext(AppContext)
@@ -37,6 +39,7 @@ export default function QuestionBox() {
 
   console.log(score); // Place the console.log outside the return statement to see the score in the console
 
+  // returning content to render
   return (
     <div className='questionBack'>
         <div className={isDark ? 'backmorph' : ''}></div>

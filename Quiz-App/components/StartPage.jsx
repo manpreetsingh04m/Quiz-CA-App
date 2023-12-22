@@ -1,11 +1,14 @@
+// importing required components 
 import React, { useContext } from 'react'
 import './../src/App.css'
 import ParentContext,{AppContext} from './../components/ParentContext.jsx'
 
+// exporting StartPage function
 export default function StartPage() {
   const {isDark,setIsDark} = useContext(AppContext)
   const {setHandleClick}=useContext(AppContext);
 
+  // returning content to display
   return (
     <div className='startBack' >
       <div className={isDark ? 'backmorph' : ''}>
@@ -13,7 +16,9 @@ export default function StartPage() {
       <div className='darkLight'>
           <button className='darkLightButton' onClick={()=>{
             setIsDark(!isDark)
-          }} style={{
+          }} 
+          // changing color according to the theme
+          style={{
             background: isDark
             ? `linear-gradient(rgba(117, 86, 159, 0.68), rgba(67, 51, 89, 0.68)), url('../public/buttonBac.png')`
             : `linear-gradient(rgba(152, 78, 255, 0.68), rgba(152, 78, 255, 0.68)), url('../public/buttonBac.png')`
@@ -24,6 +29,8 @@ export default function StartPage() {
         <button className='startButton' onClick={()=>{
       setHandleClick("QuestionBox")
     }}
+
+    // changing color according to the theme
     style={{
       background: isDark
       ? `linear-gradient(rgba(117, 86, 159, 0.68), rgba(67, 51, 89, 0.68)), url('../public/buttonBac.png')`

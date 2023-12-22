@@ -1,6 +1,8 @@
+// importing required modules
 import React, { useContext } from 'react';
 import { AppContext } from './../components/ParentContext.jsx';
 
+// exporting Result function
 export default function Result() {
   const totalQuestions = 15; // Assuming there are 10 questions
   const { score, setScore } = useContext(AppContext);
@@ -13,6 +15,7 @@ export default function Result() {
 
   const percentage = calculatePercentage(score, totalQuestions);
 
+  // returning content
   return (
     <div className='resultBack'>
        <div className={isDark ? 'backmorph' : ''}></div>
@@ -22,6 +25,7 @@ export default function Result() {
           onClick={()=>{
             setIsDark(!isDark)
           }}
+          // giving style for dark and light modes
             style={{
               background: isDark
               ? `linear-gradient(rgba(117, 86, 159, 0.68), rgba(67, 51, 89, 0.68)), url('../public/buttonBac.png')`
@@ -29,6 +33,7 @@ export default function Result() {
             }}
           >{isDark?"Light":"Dark"}</button>
         </div>
+        {/* displaying result */}
         <div className='result'>
           Result
         </div>
@@ -44,6 +49,7 @@ export default function Result() {
           setHandleClick("StartPage")
           setScore(0)
           }}
+          // changing style according to light and dark
           style={{
             background: isDark
             ? `linear-gradient(rgba(117, 86, 159, 0.68), rgba(67, 51, 89, 0.68)), url('../public/buttonBac.png')`

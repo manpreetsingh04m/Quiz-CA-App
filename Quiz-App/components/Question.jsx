@@ -1,3 +1,5 @@
+// questions that will display
+
 const questions = [
   {
     text: "What is ReactJS?",
