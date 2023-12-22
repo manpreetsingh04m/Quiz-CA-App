@@ -5,8 +5,9 @@ transition: all 0.5s;
   
 }
 .startBack,
-.questionBack {
-  background: url('../public/image\ 3.png');
+.questionBack, 
+.resultBack {
+  background: url('./../public/image3.png');
   background-repeat: no-repeat;
   background-size: 100% 100%;
   width: 100vw;
@@ -245,18 +246,7 @@ transition: all 0.5s;
 }
 
 
-.resultBack{
-  background: url('../public/image\ 3.png'), lightgray 50% ; 
-  background-repeat: no-repeat;
-  background-size: 100% 100%; 
-  width: 100vw;
-  height: 100vh;
-  display: flex; 
-  justify-content: center;
-  align-items: center;
-  transition: background 0.5s ease;
-  transition: all 0.5s;
-}
+
 
 .result{
   color: #FFF;
